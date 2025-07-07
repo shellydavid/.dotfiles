@@ -26,6 +26,8 @@ Personal dev environment for macOS 🪴
 ![Homebrew](https://img.shields.io/badge/Homebrew-758f5b?logo=homebrew)
 ![Xcode CLI Tools](https://img.shields.io/badge/Xcode_CLI_Tools-147EFB?logo=Xcode&logoColor=white)
 
+<img src="img.png">
+
 ## How It Works
 
 Configuration dotfiles are stored and managed in a centralized repo to allow for easy synchronization of your preferred dev environment across multiple machines.
