@@ -34,7 +34,7 @@ Configuration dotfiles are stored and managed in a centralized repo to allow for
 
 Gnu's [stow](https://www.gnu.org/software/stow/) tool creates symbolic links of the config files from this repo into your `~` home directory.
 
-For example, the `zsh/` directory contains the `.zshrc` config file. Running `stow zsh` is equivalent to:
+For example, the [`zsh/`](./zsh/) directory contains the [`.zshrc`](./zsh/.zshrc) config file. Running `stow zsh` is equivalent to:
 
 ```
 ln -s ~/.dotfiles/zsh/.zshrc ~/.zshrc
@@ -44,9 +44,9 @@ Stow can symlink folders too - which grants greater flexiblity in managing not o
 
 ## Usage
 
-**New environment**: clone the repo to your `~` home directory and run `source install.sh`
+**New environment**: clone the repo to your `~` home directory and run [`source install.sh`](./install.sh)
 
--   **iTerm2 Font**: `install.sh` will add _MesloLGS NF_ to your Fonts library. To set this as iTerm2 font (which makes P10k icons work), go to `iTerm2 -> Settings -> Profiles -> Text -> Font` and select _MesloLGS NF_. If you use VSCode's terminal, set _MesloLGS NF_ as the font in `Settings -> Terminal -> Integrated: Font Family`
+-   **iTerm2 Font**: [`install.sh`](./install.sh) will add _MesloLGS NF_ to your Fonts library. To set this as iTerm2 font (which makes P10k icons work), go to `iTerm2 -> Settings -> Profiles -> Text -> Font` and select _MesloLGS NF_. If you use VSCode's terminal, set _MesloLGS NF_ as the font in `Settings -> Terminal -> Integrated: Font Family`
 -   **iTerm2 Colors**: Go to `iTerm2 -> Settings -> Profiles -> Colors -> Color Presets`. Select "Import" and upload the `NvimDark.itermcolors` file from this repo. Click on the dropdown again and select NvimDark.
     <img src="https://raw.githubusercontent.com/mbadolato/iTerm2-Color-Schemes/master/screenshots/NvimDark.png">
 
@@ -56,7 +56,7 @@ Stow can symlink folders too - which grants greater flexiblity in managing not o
 
 From my experience, the easiest way to test changes to these dotfiles is by creating a new user. Virtualization for macOS is difficult and largely unsupported due to Apple's Software Licensing Agreements. Cloud instances for macOS are much more costly than Linux/Windows for the same reason.
 
-Creating a new user grants you a fresh `~` home directory to mess around in. XCode, Homebrew, and Homebrew packages are typically system-level. However, miniconda, Oh My Zsh, P10k, and `.zshrc` related configs are installed at the user-level in this repo.
+Creating a new user grants you a fresh `~` home directory to mess around in. XCode, Homebrew, and Homebrew packages are typically system-level. However, miniconda, Oh My Zsh, P10k, and [`.zshrc`](./zsh/.zshrc) related configs are installed at the user-level in this repo.
 
 ## Resources
 
