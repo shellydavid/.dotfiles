@@ -80,7 +80,7 @@ else
 fi
 
 echo "🔠 Copying fonts for Powerlevel10K ------------"
-cp ./*.ttf ~/Library/Fonts/
+cp ./iTerm2Fonts/*.ttf ~/Library/Fonts/
 
 
 # Symlink dotfiles with gnu stow
