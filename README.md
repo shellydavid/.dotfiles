@@ -47,7 +47,7 @@ Stow can symlink folders too - which grants greater flexiblity in managing not o
 **New environment**: clone the repo to your `~` home directory and run `source install.sh`
 
 -   **iTerm2 Font**: [`install.sh`](./install.sh) will add _MesloLGS NF_ to your Fonts library. To set this as iTerm2 font (which makes P10k icons work), go to `iTerm2 -> Settings -> Profiles -> Text -> Font` and select _MesloLGS NF_. If you use VSCode's terminal, set _MesloLGS NF_ as the font in VSCode: `Settings -> Terminal -> Integrated: Font Family`
--   **iTerm2 Colors**: Go to `iTerm2 -> Settings -> Profiles -> Colors -> Color Presets`. Select "Import" and upload the [`iTerm2Colors/NvimDark.itermcolors`]([./iTerm2Colors/NvimDark.itermcolors]) file from this repo. Click on the dropdown again and select NvimDark.
+-   **iTerm2 Colors**: Go to `iTerm2 -> Settings -> Profiles -> Colors -> Color Presets`. Select "Import" and upload the [`iTerm2Colors/NvimDark.itermcolors`](./iTerm2Colors/NvimDark.itermcolors) file from this repo. Click on the dropdown again and select NvimDark.
     <img src="https://raw.githubusercontent.com/mbadolato/iTerm2-Color-Schemes/master/screenshots/NvimDark.png">
 
 **Existing environment**: `git pull` any updates and the symlinks will auto-update
