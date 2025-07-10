@@ -166,7 +166,7 @@ source ~/powerlevel10k/powerlevel10k.zsh-theme  # Required for manual installati
 
 # fzf =========================================
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-export FZF_DEFAULT_OPTS="--height=40% --preview='cat {}' --preview-window=right:60%:wrap"
+export FZF_DEFAULT_OPTS="--style full --height=50% --preview 'fzf-preview.sh {}' --preview-window=right:60%:wrap"
 
 
 
