@@ -42,8 +42,7 @@ brew bundle
 # Install Miniconda
 #   https://www.anaconda.com/docs/getting-started/miniconda/install#macos
 #   System-level installation for miniconda requires a GUI. The CLI installer, utilized here, is user-level
-command -v conda &> /dev/null
-if [[ $? -ne 0 ]]; then
+if [[ ! -d "$HOME/miniconda3/" ]]; then
     echo "🐍 Installing Miniconda ------------"
     mkdir -p ~/miniconda3
 
