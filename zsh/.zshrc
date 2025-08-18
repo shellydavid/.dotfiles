@@ -34,9 +34,11 @@ fi
 
 
 # Pyenv =========================================
-export PYENV_ROOT="$HOME/.pyenv"  # points to path where Pyenv stores its data
-[[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"  # add pyenv exectuable to path
-eval "$(pyenv init -)"  # install pyenv into shell as a shell function to enable shims and autocompletion
+# Alternative solution to speed up zsh init: https://github.com/pyenv/pyenv/issues/2918#issuecomment-1977029534
+pyenv() {
+    eval "$(command pyenv init -)"
+    pyenv "$@"
+}
 
 
 
