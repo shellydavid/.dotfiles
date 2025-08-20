@@ -1,0 +1,29 @@
+
+------- Log -------
+glo - git log
+glod - git log with diffs
+
+------- Branches -------
+gb - git branch
+gco - git checkout
+gcb - git checkout -b
+
+------- Commits -------
+gs - git status
+ga - git add
+gcm - git commit -m
+gd - git diff
+gp - git push
+ggpush - git push origin <current_branch>
+grb - git rebase
+gcp - git cherry-pick
+gcpa - git cherry-pick --abort
+gcpc - git cherry-pick--continue
+oops - git reset --soft HEAD~1
+
+------- Stash -------
+gst - git stash (includes untracked)
+gstl - git stash list
+gstp - git stash pop
+gsts - git stash show
+gstd - git stash drop

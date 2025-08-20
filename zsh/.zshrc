@@ -44,7 +44,7 @@ export ZSH="$HOME/.oh-my-zsh"
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
 
-ZSH_THEME="robbyrussell"
+# ZSH_THEME="robbyrussell"
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -106,7 +106,8 @@ ZSH_THEME="robbyrussell"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git)
+plugins=(git colorize)
+ZSH_COLORIZE_STYLE="zenburn"  # Color options: https://pygments.org/styles/
 
 source $ZSH/oh-my-zsh.sh
 
@@ -158,6 +159,7 @@ source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 # Aliases =========================================
 alias c="clear"
 alias x="exit"
+alias cat="ccat"  # Override 'cat' command to use colorize plugin
 alias restart='source ~/.zshrc'
 alias gs='git status'
 alias glo='git log --pretty="format:%C(auto)%h% %C(auto)%d%Creset %s %Cgreen(%ad) %C(blue bold)<%an>"'  # Override OMZ "glo" alias to include more info/styling
@@ -165,6 +167,7 @@ alias glo='git log --pretty="format:%C(auto)%h% %C(auto)%d%Creset %s %Cgreen(%ad
 alias gst='git stash -u'  # Stash untracked files by default as well
 alias glod='git log --pretty="format:%C(auto)%h% %C(auto)%d%Creset %s %Cgreen(%ad) %C(blue bold)<%an>" -p'  # Same as above, but adding a git diff for each commit
 alias gcm='git commit -m'
+alias oops='git reset --soft HEAD~1'
 
 
 # Custom commands =========================================
@@ -181,4 +184,10 @@ function align_prod() {  # Auto rebase branch against production
 function make_release_branch() {  # Create production release branch
     BRANCH=$(git branch --show-current)
     git checkout master && git pull && git checkout -b release-"$BRANCH"
+}
+
+function git_ref() {
+    # cat a txt file showing the subset of git aliases from the OMZ
+    # git plugins I'm actively using + custom git aliases, for quicker reference
+    cat "$HOME/.dotfiles/refs/git_alias_reference.txt"
 }
