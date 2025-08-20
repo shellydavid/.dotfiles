@@ -1,27 +1,4 @@
 
-# Aliases =========================================
-alias c="clear"
-alias x="exit"
-
-
-
-# Custom commands =========================================
-function align_staging() {  # Auto rebase branch against staging
-    BRANCH=$(git branch --show-current)
-    git checkout development && git pull && git checkout $BRANCH && git rebase development
-}
-
-function align_prod() {  # Auto rebase branch against production
-    BRANCH=$(git branch --show-current)
-    git checkout master && git pull && git checkout $BRANCH && git rebase master
-}
-
-function make_release_branch() {  # Create production release branch
-    BRANCH=$(git branch --show-current)
-    git checkout master && git pull && git checkout -b release-"$BRANCH"
-}
-
-
 
 # P10k config =========================================
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
@@ -175,3 +152,33 @@ export FZF_DEFAULT_OPTS="--style full --height=50% --preview 'fzf-preview.sh {}'
 # zsh-syntax-highlighting =========================================
 # Should stay at the end of .zshrc
 source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
+
+
+# Aliases =========================================
+alias c="clear"
+alias x="exit"
+alias restart='source ~/.zshrc'
+alias gs='git status'
+alias glo='git log --pretty="format:%C(auto)%h% %C(auto)%d%Creset %s %Cgreen(%ad) %C(blue bold)<%an>"'  # Override OMZ "glo" alias to include more info/styling
+# NOTE - 'glod' and 'gst' override aliases by the same name from OMZ
+alias gst='git stash -u'  # Stash untracked files by default as well
+alias glod='git log --pretty="format:%C(auto)%h% %C(auto)%d%Creset %s %Cgreen(%ad) %C(blue bold)<%an>" -p'  # Same as above, but adding a git diff for each commit
+alias gcm='git commit -m'
+
+
+# Custom commands =========================================
+function align_staging() {  # Auto rebase branch against staging
+    BRANCH=$(git branch --show-current)
+    git checkout development && git pull && git checkout $BRANCH && git rebase development
+}
+
+function align_prod() {  # Auto rebase branch against production
+    BRANCH=$(git branch --show-current)
+    git checkout master && git pull && git checkout $BRANCH && git rebase master
+}
+
+function make_release_branch() {  # Create production release branch
+    BRANCH=$(git branch --show-current)
+    git checkout master && git pull && git checkout -b release-"$BRANCH"
+}
