@@ -67,7 +67,7 @@ alias x="exit"
 alias cat="ccat"  # Override 'cat' command to use colorize plugin
 alias restart='source ~/.zshrc'
 alias gs='git status'
-alias glo='git log --pretty="format:%C(auto)%h% %C(auto)%d%Creset %s %Cgreen(%ad)   %C(blue bold)<%an> %Creset%C(magenta italic)%ae"'  # Override OMZ "glo" alias to include more info/styling
+alias glo='git log --graph --pretty="format:%C(auto)%h% %C(auto)%d%Creset %s %Cgreen(%ad)   %C(blue bold)<%an> %Creset%C(magenta italic)%ae"'  # Override OMZ "glo" alias to include more info/styling
 # NOTE - 'glod' and 'gst' override aliases by the same name from OMZ
 alias gst='git stash -u'  # Stash untracked files by default as well
 alias glod='git log --pretty="format:%C(auto)%h% %C(auto)%d%Creset %s %Cgreen(%ad)   %C(blue bold)<%an> %Creset%C(magenta italic)%ae" -p'  # Same as above, but adding a git diff for each commit
