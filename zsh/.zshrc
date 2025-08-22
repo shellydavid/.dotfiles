@@ -68,9 +68,10 @@ alias cat="ccat"  # Override 'cat' command to use colorize plugin
 alias restart='source ~/.zshrc'
 alias gs='git status'
 alias glo='git log --graph --pretty="format:%C(auto)%h% %C(auto)%d%Creset %s %Cgreen(%ad)   %C(blue bold)<%an> %Creset%C(magenta italic)%ae"'  # Override OMZ "glo" alias to include more info/styling
-# NOTE - 'glod' and 'gst' override aliases by the same name from OMZ
+# NOTE - 'glod', 'gpu', and 'gst' override aliases by the same name from OMZ
 alias gst='git stash -u'  # Stash untracked files by default as well
 alias glod='git log --pretty="format:%C(auto)%h% %C(auto)%d%Creset %s %Cgreen(%ad)   %C(blue bold)<%an> %Creset%C(magenta italic)%ae" -p'  # Same as above, but adding a git diff for each commit
+alias gpu='git pull'
 alias gcm='git commit -m'
 alias oops='git reset --soft HEAD~1'
 
@@ -95,4 +96,16 @@ function git_ref() {
     # cat a txt file showing the subset of git aliases from the OMZ
     # git plugins I'm actively using + custom git aliases, for quicker reference
     cat "$HOME/.dotfiles/refs/git_alias_reference.txt"
+}
+
+function whoamigl() {
+    # Display git user.name and user.email for the local repository
+    git config user.name
+    git config user.email
+}
+
+function whoamigg() {
+    # Display global git user.name and user.email
+    git config --global user.name
+    git config --global user.email
 }
