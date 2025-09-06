@@ -4,6 +4,8 @@ Personal dev environment for macOS 🪴 - packages, tools, settings, and aliases
 <br>
 [Medium - macOS Dotfiles & Terminal Setup](https://medium.com/@shellydavid/macos-dotfiles-terminal-setup-61160a7bd981)
 
+> _created on macOS Seqouia x Intel_
+
 ## Stuff Included
 
 **Terminal**:
