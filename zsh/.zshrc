@@ -68,7 +68,7 @@ alias cat="ccat"  # Override 'cat' command to use colorize plugin
 alias restart='source ~/.zshrc'
 alias gs='git status'
 alias glo='git log --graph --pretty="format:%C(auto)%h% %C(auto)%d%Creset %s %Cgreen(%ad)   %C(blue bold)<%an> %Creset%C(magenta italic)%ae"'  # Override OMZ "glo" alias to include more info/styling
-# NOTE - 'glod', 'gpu', and 'gst' override aliases by the same name from OMZ
+# NOTE - 'glod', 'gcm', 'gpu', and 'gst' override aliases by the same name from OMZ
 alias gst='git stash -u'  # Stash untracked files by default as well
 alias glod='git log --pretty="format:%C(auto)%h% %C(auto)%d%Creset %s %Cgreen(%ad)   %C(blue bold)<%an> %Creset%C(magenta italic)%ae" -p'  # Same as above, but adding a git diff for each commit
 alias gpu='git pull'
@@ -79,17 +79,17 @@ alias oops='git reset --soft HEAD~1'
 # Custom commands =========================================
 function align_staging() {  # Auto rebase branch against staging
     BRANCH=$(git branch --show-current)
-    git checkout development && git pull && git checkout $BRANCH && git rebase development
+    git checkout $(git_develop_branch) && git pull && git checkout $BRANCH && git rebase $(git_develop_branch)
 }
 
 function align_prod() {  # Auto rebase branch against production
     BRANCH=$(git branch --show-current)
-    git checkout master && git pull && git checkout $BRANCH && git rebase master
+    git checkout $(git_main_branch) && git pull && git checkout $BRANCH && git rebase $(git_main_branch)
 }
 
 function make_release_branch() {  # Create production release branch
     BRANCH=$(git branch --show-current)
-    git checkout master && git pull && git checkout -b release-"$BRANCH"
+    git checkout $(git_main_branch) && git pull && git checkout -b release-"$BRANCH"
 }
 
 function git_ref() {
