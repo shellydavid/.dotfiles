@@ -64,6 +64,7 @@ source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 # Aliases =========================================
 alias c="clear"
 alias x="exit"
+alias ls="lsd -l"  # Override 'ls' command to use lsd
 alias cat="ccat"  # Override 'cat' command to use colorize plugin
 alias restart='source ~/.zshrc'
 alias gs='git status'
