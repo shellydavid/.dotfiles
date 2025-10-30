@@ -10,8 +10,8 @@ Personal dev environment for macOS 🪴 - packages, tools, settings, and aliases
 
 **Terminal**:
 ![iTerm2](https://img.shields.io/badge/iTerm2-2EBC7F?logo=iterm2&logoColor=white)
-![Oh My Zsh](https://img.shields.io/badge/Oh%20My%20Zsh-C71F37?logo=zsh&logoColor=white)
-![Powerlevel10k](https://img.shields.io/badge/Powerlevel10k-8F36D6?logo=gnome-terminal&logoColor=white)
+![Oh My Zsh](https://img.shields.io/badge/OhMyZsh-C71F37?logo=zsh&logoColor=white)
+![Powerlevel10k](https://img.shields.io/badge/P10k-8F36D6?logo=gnome-terminal&logoColor=white)
 ![jq](https://img.shields.io/badge/jq-5C89C7?logo=json&logoColor=white)
 ![git](https://img.shields.io/badge/git-F05032?logo=git&logoColor=white)
 ![fzf](https://img.shields.io/badge/fzf-6E6E6E?logo=linux&logoColor=white)
@@ -20,11 +20,14 @@ Personal dev environment for macOS 🪴 - packages, tools, settings, and aliases
 ![tldr](https://img.shields.io/badge/tldr-FFA500?logo=gnome-terminal&logoColor=white)
 ![tree](https://img.shields.io/badge/tree-FE5F50?logo=files&logoColor=white)
 ![stow](https://img.shields.io/badge/stow-999999?logo=gnu&logoColor=white)
+![gping](https://img.shields.io/badge/gping-453?logo=gnometerminal&logoColor=white)
+![lsd](https://img.shields.io/badge/lsd-4099AA?logo=gnu-bash&logoColor=white)
+![ctop](https://img.shields.io/badge/ctop-237?logo=docker&logoColor=white)
 ![zsh-syntax-highlighting](https://img.shields.io/badge/zsh_syntax_highlighting-923729?logo=gnome-terminal&logoColor=white)
 
 **Python**:
 ![Miniconda](https://img.shields.io/badge/Miniconda-44A833?logo=anaconda&logoColor=white)
-![pyenv](https://img.shields.io/badge/pyenv-3776AB?logo=python&logoColor=white)
+![Pyenv](https://img.shields.io/badge/Pyenv-3776AB?logo=python&logoColor=white)
 
 **System**:
 ![Homebrew](https://img.shields.io/badge/Homebrew-758f5b?logo=homebrew)
