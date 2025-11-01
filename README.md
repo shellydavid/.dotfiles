@@ -23,6 +23,7 @@ Personal dev environment for macOS 🪴 - packages, tools, settings, and aliases
 ![gping](https://img.shields.io/badge/gping-453?logo=gnometerminal&logoColor=white)
 ![lsd](https://img.shields.io/badge/lsd-4099AA?logo=gnu-bash&logoColor=white)
 ![ctop](https://img.shields.io/badge/ctop-237?logo=docker&logoColor=white)
+![dysk](https://img.shields.io/badge/dysk-FE5FAF?logo=files&logoColor=white)
 ![zsh-syntax-highlighting](https://img.shields.io/badge/zsh_syntax_highlighting-923729?logo=gnome-terminal&logoColor=white)
 
 **Python**:
